@@ -53,6 +53,9 @@ const NAMES = [
   'Шлёпс',
   'Фырч',
 ];
+
+export const COMMENT_SHOWN = 5;
+
 const generatePhotoId = createRandomIdFromRangeGenerator(1, 25);
 const generatePhoto = createRandomIdFromRangeGenerator(1, 25);
 const generatePhotoCaption = createRandomIdFromRangeGenerator(0, 24);
@@ -82,6 +85,7 @@ const createPost = () => {
     id: generatePhotoId(),
     url: 'photos/' + generatePhoto() + '.jpg',
     description: PHOTO_CAPTIONS[(generatePhotoCaption())],
+    avatar: 'img/avatar-' + getRandomInteger(1, 6) + '.svg',
     likes: getRandomInteger(15, 200),
     comments: commentsArray,
   };

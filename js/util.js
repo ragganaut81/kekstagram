@@ -32,3 +32,13 @@ export function createIdGenerator () {
 }
 
 export const getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
+
+export const isEscapeKey = (evt) => evt.key === 'Escape';
+
+export function showButton (button, show = false) {
+  if (show) {
+    button.classList.remove('hidden');
+  } else {
+    button.classList.add('hidden');
+  }
+}
